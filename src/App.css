@@ -1,3 +1,6 @@
+*{
+  overflow-x: hidden;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,7 +12,7 @@
   );
 }
 nav ul li {
-  list-style: none;
+  list-style: none; cursor: pointer;
 }
 nav ul {
   display: flex;
@@ -24,7 +27,8 @@ nav ul {
 .leftBar button {
   outline: none;
   border: none;
-  background: #ffff;
+  background: linear-gradient(135deg, #ffffff, #e9ecef);
+  border-radius: 10px;
   font-weight: bolder;
 }
 .leftBar button:hover {
@@ -36,8 +40,10 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .bar {
+  
   padding: 30px;
 }
 .mainBar {
@@ -48,20 +54,60 @@ nav ul {
   border: 1px gray solid;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 .roomCotainer {
+  margin: 0 15px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  width: 206.8px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.heart svg {
+  transition: transform 0.2s;
+}
+.heart:hover svg {
+  transform: scale(1.1);
+}
+
+/* .roomCotainer {
   margin-left: 15px;
   margin-right: 15px;
 }
 .cards {
   display: flex;
-  /* flex-direction: row; */
+
   gap: 16px;
-  flex-wrap: wrap; 
-  
+  flex-wrap: wrap;
 }
-.card{
-    position: relative;
+.card {
+  position: relative;
 }
 .card img {
   width: 300px;
@@ -69,26 +115,23 @@ nav ul {
   object-fit: cover;
   border-radius: 8px;
 }
-.card .heart svg{
-    position: absolute;
-    top: 5px;
-    left: 260px;
-}
-.footer{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
-     background-color: rgb(245, 244, 244);
+.card .heart svg {
+  position: absolute;
+  top: 5px;
+  left: 260px;
+} */
+.footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(245, 244, 244);
 }
 .footer ul li {
-    list-style: none;
-    
+  list-style: none;
 }
 
-
-@media screen  and (min-width:300px) and (max-width:800px){
-  
- .navbar {
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  .navbar {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
@@ -101,13 +144,12 @@ nav ul {
   .leftBar {
     display: none;
   }
-  .searchbar{
- display: none;
+  .searchbar {
+    display: none;
   }
-    
 }
-@media screen  and (min-width:300px) and (max-width:600px){
-.footer {
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .footer {
     flex-direction: column;
     align-items: center;
     text-align: center;

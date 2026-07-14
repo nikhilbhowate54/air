@@ -250,7 +250,7 @@
 
 // export default Home;
 import React, { useEffect, useState } from "react";
-import "../app.css";
+import "../App.css";
 import Image from "../assets/room.webp";
 import { Dropdown, Card, Button, Row, Col } from "antd";
 import { Link, useNavigate } from "react-router-dom";
